@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html><body><style>
+    *{
+        padding:0;
+        margin:20px 0;
+    }
+    pre{
+        width:100%;
+    }
+    main{
+        max-width:500px;
+        border:1px solid #d1d1d1;
+        border-radius: 20px;
+    }
+    main div{
+        width:100px;
+        height:100px;
+    }
+</style>
+<dt>
+    <dt>
+        <h2>background-image:url(地址)123asd111111</h2>
+    </dt>
+    <dd>
+        <main>
+            <style>
+                .url{
+                    background-image:url('../assets/test.png');
+                }
+            </style>
+            <div class="url"></div>
+            <pre>background-image:url('../assets/test.png');</pre>
+        </main>
+    </dd>
+</dt>
+<dt>
+    <dt>
+        <h2>background-image:gradients(渐变)</h2>
+    </dt>
+    <dd>
+        <main>
+            <h3>linear-gradient(线性)默认的方向为↓</h3>
+            <style>
+                .linear-gradient{
+                    background:linear-gradient(blue,pink)
+                }
+            </style>
+            <div class="linear-gradient"></div>
+            <pre>background:linear-gradient(blue,pink);</pre>
+        </main>
+        
+<pre><code>    &lt;main&gt;
+        &lt;h3&gt;linear-gradient(线性)改变方向为→&lt;/h3&gt;
+        &lt;style&gt;
+            .linear-gradient-toright{
+                background:linear-gradient(to right,blue,pink)
+            }
+        &lt;/style&gt;
+        &lt;div class=&quot;linear-gradient-toright&quot;&gt;&lt;/div&gt;
+        &lt;pre&gt;background:linear-gradient(to right,blue,pink);&lt;/pre&gt;
+    &lt;/main&gt;
+    &lt;main&gt;
+        &lt;h3&gt;linear-gradient(线性)改变方向为↘&lt;/h3&gt;
+        &lt;style&gt;
+            .linear-gradient-tobottomright{
+                background:linear-gradient(to bottom right,blue,pink)
+            }
+        &lt;/style&gt;
+        &lt;div class=&quot;linear-gradient-tobottomright&quot;&gt;&lt;/div&gt;
+        &lt;pre&gt;background:linear-gradient(to bottom right,blue,pink);&lt;/pre&gt;
+    &lt;/main&gt;
+    &lt;main&gt;
+        &lt;h3&gt;linear-gradient(线性)通过角度改变方向,0角度位6点方向，角度顺时针增加&lt;/h3&gt;
+        &lt;style&gt;
+            .linear-gradient-todeg{
+                background:linear-gradient(0deg,blue,pink)
+            }
+        &lt;/style&gt;
+        &lt;div class=&quot;linear-gradient-todeg&quot;&gt;&lt;/div&gt;
+        &lt;pre&gt;background:linear-gradient(0deg,blue,pink);&lt;/pre&gt;
+    &lt;/main&gt;
+    &lt;main&gt;
+        &lt;h3&gt;linear-gradient(线性)设置颜色范围&lt;/h3&gt;
+        &lt;style&gt;
+            .linear-gradient-range{
+                background:linear-gradient(blue,green 30%,red 50px)
+            }
+            .linear-gradient-range2{
+                background:linear-gradient(blue,green,red)
+            }
+        &lt;/style&gt;
+        &lt;div class=&quot;linear-gradient-range&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;linear-gradient-range2&quot;&gt;&lt;/div&gt;
+        &lt;pre&gt;background:linear-gradient(blue,green 30%,red 50px)&lt;/pre&gt;
+        &lt;p&gt;色块设置的为终点位置，色块之间的渐变为浏览器自动分布&lt;/p&gt;
+    &lt;/main&gt;
+
+    &lt;main&gt;
+        &lt;h3&gt;linear-gradient(线性)设置非渐变，色块&lt;/h3&gt;
+        &lt;style&gt;
+            .linear-gradient-no{
+                background:linear-gradient(blue 50%,green 50% )
+            }
+        &lt;/style&gt;
+        &lt;div class=&quot;linear-gradient-no&quot;&gt;&lt;/div&gt;
+        &lt;pre&gt; background:linear-gradient(blue 50%,green 50% );&lt;/pre&gt;
+    &lt;/main&gt;
+
+    &lt;main&gt;
+        &lt;h3&gt;linear-gradient(线性)渐变中心偏移&lt;/h3&gt;
+        &lt;style&gt;
+            .linear-gradient-deviation{
+                background:linear-gradient(blue,10%,green,20%,red)
+            }
+        &lt;/style&gt;
+        &lt;div class=&quot;linear-gradient-deviation&quot;&gt;&lt;/div&gt;
+        &lt;pre&gt; background:linear-gradient(blue,10%,green,20%,red)&lt;/pre&gt;
+    &lt;/main&gt;
+    &lt;main&gt;
+        &lt;h3&gt;linear-gradient(线性)色带&lt;/h3&gt;
+        &lt;style&gt;
+            .multiposition-stops {
+                background: linear-gradient(to left,
+                    lime 20%, red 30%, red 45%, cyan 55%, cyan 70%, yellow 80% );
+                background: linear-gradient(to left,
+                    lime 20%, red 30% 45%, cyan 55% 70%, yellow 80% );
+            }
+        &lt;/style&gt;
+        &lt;div class=&quot;multiposition-stops&quot;&gt;&lt;/div&gt;
+        &lt;pre&gt;
+</code></pre>
+<code>
+    background: linear-gradient(to left,
+            lime 20%, red 30%, red 45%, cyan 55%, cyan 70%, yellow 80% );
+    background: linear-gradient(to left,
+        lime 20%, red 30% 45%, cyan 55% 70%, yellow 80% );
+</code>
+            </pre>
+            <p>以上为色带的两种写法，如果要创建色块的话只要将收尾不同颜色色块的位置设置为同一个即可</p>
+        </main>
+        <main>
+            <h3>linear-gradient(线性)堆叠渐变</h3>
+            <style>
+            .stacked-linear {
+                background:
+                    linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+                    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+                    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+            }
+            </style>
+            <div class="stacked-linear"></div>
+            <pre>
+<code>
+     background:
+        linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+        linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+        linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+</code>
+            </pre>
+        </main>
+        <main>
+            <h3>repeating-linear-gradient(重复线性)</h3>
+            <style>
+            .repeating-linear {
+                background: repeating-linear-gradient(-45deg, red, red 5px, blue 5px, blue 10px);
+            }
+            </style>
+            <div class="repeating-linear"></div>
+            <pre>
+<code>
+    background: repeating-linear-gradient(-45deg, red, red 5px, blue 5px, blue 10px);
+</code>
+            </pre>
+        </main>
+        <!-- <div class="linear-gradient"></div> -->
+        <h3>radial-gradient(径向)</h3>
+        <h3>repeating-radial-gradient(重复径向)</h3>
+        <h3>conic-gradient(圆锥)</h3>
+    </dd>
+</dt>
+<dt>
+    <dt>
+        <h2>background-image:none(消失)</h2>
+    </dt>
+    <dd>
+        <div class="none"></div>
+    </dd>
+</dt>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/androidstudio.css" />
+
+<script>
+   var preTags = document.getElementsByTagName('pre');
+   var size = preTags.length;
+   for (var i=0; i < size; i++) { 
+       preTags[i].innerHTML = '<code>'+preTags[i].innerHTML+'</code>'; // wrap content of pre tag in code tag
+   }
+   hljs.highlightAll(); // apply highlighting
+</script>
+</body></html>
