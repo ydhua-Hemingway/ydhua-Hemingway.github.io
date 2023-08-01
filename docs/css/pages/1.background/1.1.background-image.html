@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html><head><link rel="stylesheet" href="/css/main.css"></head><body><h2 id="background-image">background-image</h2>
+<h3 id="background-imageurlassets_path">background-image:url(ASSETS_PATH)</h3>
+<blockquote>
+<p>读取背景地址</p>
+</blockquote>
+<style>
+    .url{
+        background-image:url('../../assets/test.png');
+    }
+</style>
+
+<div class="box url"></div>
+
+<p>html </p>
+<pre><code>&lt;div class=&quot;box url&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>css</p>
+<pre><code>.url{
+    background-image:url(&#39;../../assets/test.png&#39;);
+}
+</code></pre>
+<hr>
+<!-- 通用css -->
+<style>
+    *{
+        padding:0;
+        margin:20px 0;
+    }
+    main{
+        max-width:500px;
+        border:1px solid #d1d1d1;
+        border-radius: 20px;
+    }
+    .box{
+        width:100px;
+        height:100px;
+    }
+</style></body></html>
