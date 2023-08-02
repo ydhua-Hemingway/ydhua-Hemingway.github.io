@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html><head><link rel="stylesheet" href="/css/main.css"></head><body><h2 id="background-image">background-image</h2>
+<h3 id="1background-imageurlassets_path">1.background-image:url(ASSETS_PATH)</h3>
+<blockquote>
+<p>background是一个读取背景地址，呈现于元素底层的属性。</p>
+</blockquote>
+<p><strong>示例</strong></p>
+<style>
+    .url{
+        background-image:url('../../assets/test.png');
+    }
+</style>
+
+<div class="box url"></div>
+
+<p><strong>html</strong> </p>
+<pre><code>&lt;div class=&quot;box url&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p><strong>css</strong></p>
+<pre><code>.url{
+    background-image:url(&#39;../../assets/test.png&#39;);
+}
+</code></pre>
+<p><em><strong>此属性在css中还有一种混合写法</strong></em></p>
+<pre><code>background:url(ASSETS_PATH);
+</code></pre>
+<hr>
+<h3 id="11扩展多image混合使用">1.1扩展(多image混合使用)</h3>
+<blockquote>
+<p>几个image可以在一个属性中混合使用。要注意的是既然是混合写法，那么就会有展示层级。层级规则为书写从左往右，展示层级则从上到下。</p>
+</blockquote>
+<p><strong>示例</strong></p>
+<style>
+    .more{
+        background-image:url('../../assets/star.png'),url('../../assets/test.png');
+    }
+</style>
+<div class="box more"></div>
+
+<p><strong>html</strong></p>
+<pre><code>&lt;div class=&#39;box more&#39;&gt;&lt;/div&gt;
+</code></pre>
+<p><strong>css</strong></p>
+<pre><code>.more{
+    background-image:url(&#39;../../assets/star.png&#39;),url(&#39;../../assets/test.png&#39;);
+}
+</code></pre>
+<hr>
+<h3 id="12扩展雪碧图或精灵图">1.2扩展(雪碧图或精灵图)</h3>
+<blockquote>
+<p>本文所使用的图片全部面貌为：<br><img src="../../assets/test.png" alt=""><br>如果我们希望图片只展示右侧的圆，那么我们如何去做。</p>
+</blockquote>
+<p><strong>示例</strong></p>
+<style>
+    .sprite{
+        background-image:url('../../assets/test.png');
+        background-position: -120px 0;
+        background-repeat:no-repeat;
+    }
+</style>
+<div class='box sprite'></div>
+
+<p><strong>html</strong></p>
+<pre><code>&lt;div class=&#39;box sprite&#39;&gt;&lt;/div&gt;
+</code></pre>
+<p><strong>css</strong></p>
+<pre><code>.sprite{
+    background-image:url(&#39;../../assets/test.png&#39;);
+    background-position: -120px 0;
+    background-repeat:no-repeat;
+}
+</code></pre>
+<blockquote>
+<p>这里我们涉及到的background-position和background-repeat属性后面的章节会讲到。</p>
+</blockquote>
+<h2 id="文献">文献</h2>
+<ul>
+<li>[1] <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-image">MDN</a></li>
+</ul>
+<!-- 通用css -->
+<style>
+    *{
+        padding:0;
+        margin:20px 0;
+    }
+    main{
+        max-width:500px;
+        border:1px solid #d1d1d1;
+        border-radius: 20px;
+    }
+    .box{
+        width:100px;
+        height:100px;
+    }
+</style></body></html>

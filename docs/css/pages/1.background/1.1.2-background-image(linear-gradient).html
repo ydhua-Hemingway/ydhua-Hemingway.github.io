@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html><head><link rel="stylesheet" href="/css/main.css"></head><body><h2 id="background-image">background-image</h2>
+<h3 id="1background-imageurlassets_path">1.background-image:url(ASSETS_PATH)</h3>
+<blockquote>
+<p>background是一个读取背景地址，呈现于元素底层的属性。</p>
+</blockquote>
+<p><strong>示例</strong></p>
+<style>
+    .url{
+        background-image:url('../../assets/test.png');
+    }
+</style>
+
+<div class="box url"></div>
+
+<p><strong>html</strong> </p>
+<pre><code>&lt;div class=&quot;box url&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p><strong>css</strong></p>
+<pre><code>.url{
+    background-image:url(&#39;../../assets/test.png&#39;);
+}
+</code></pre>
+<h2 id="文献">文献</h2>
+<ul>
+<li>[1] <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-image">MDN</a></li>
+</ul>
+<!-- 通用css -->
+<style>
+    *{
+        padding:0;
+        margin:20px 0;
+    }
+    main{
+        max-width:500px;
+        border:1px solid #d1d1d1;
+        border-radius: 20px;
+    }
+    .box{
+        width:100px;
+        height:100px;
+    }
+</style></body></html>
