@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html><head><link rel="stylesheet" href="/css/css/main.css"></head><body><h2 id="1background-imagegradients">1.background-image:gradients</h2>
+<h2 id="11-repeating-linear-gradient">1.1 repeating-linear-gradient</h2>
+<h3 id="111基础">1.1.1基础</h3>
+<blockquote>
+<p>repeating-linear-gradient是linear-gradient的循环版本。当色块不满足填充模块时，会自动循环填充剩余的内容。</p>
+</blockquote>
+<p><strong>语法</strong></p>
+<pre><code>background-image:repeating-linear-gradient(&lt;same linear-gradient&gt;)
+</code></pre>
+<p><a href="1.1.2-background-image(linear-gradient)">linear-gradient文档地址</a>  </p>
+<p><strong>示例</strong></p>
+<style>
+    .repeating-linear-gradient-default{
+        background-image:repeating-linear-gradient(blue 0 10px,pink 10px 20px)
+    }
+</style>
+
+<div class="box repeating-linear-gradient-default"></div>
+
+<p><strong>html</strong> </p>
+<pre><code>&lt;div class=&quot;box repeating-linear-gradient-default&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p><strong>css</strong></p>
+<pre><code>.repeating-linear-gradient-default{
+    background-image:repeating-linear-gradient(blue 0 10px,pink 10px 20px)
+}
+</code></pre>
+<h2 id="文献">文献</h2>
+<ul>
+<li>[1] <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients">MDN</a></li>
+</ul>
+<!-- 通用css -->
+<style>
+    *{
+        padding:0;
+        margin:20px 0;
+    }
+    main{
+        max-width:500px;
+        border:1px solid #d1d1d1;
+        border-radius: 20px;
+    }
+    .box{
+        width:100px;
+        height:100px;
+    }
+</style></body></html>

@@ -1,3 +1,7 @@
+body{
+  margin-left:20px;
+}
+
 /* Markdown 样式 */
 
 /* 标题 */
@@ -53,6 +57,7 @@ h1, h2, h3, h4, h5, h6 {
   
   /* 引用 */
   blockquote {
+    line-height: 1.5em;
     margin: 1em 0;
     padding: 0 1em;
     color: #6a737d;

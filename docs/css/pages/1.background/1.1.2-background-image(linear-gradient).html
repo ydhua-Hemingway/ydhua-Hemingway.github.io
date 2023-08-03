@@ -1,29 +1,114 @@
 <!DOCTYPE html>
-<html><head><link rel="stylesheet" href="/css/css/main.css"></head><body><h2 id="background-image">background-image</h2>
-<h3 id="1background-imageurlassets_path">1.background-image:url(ASSETS_PATH)</h3>
+<html><head><link rel="stylesheet" href="/css/css/main.css"></head><body><h2 id="1background-imagegradients">1.background-image:gradients</h2>
+<h2 id="11-linear-gradient">1.1 linear-gradient</h2>
+<h3 id="111基础">1.1.1基础</h3>
 <blockquote>
-<p>background是一个读取背景地址，呈现于元素底层的属性。</p>
+<p>linear-gradient为线性变化，其默认的方向为↓。</p>
 </blockquote>
+<p><strong>语法</strong></p>
+<pre><code>background-image:linear-gradient(&lt;color&gt;,&lt;color&gt;...)
+</code></pre>
 <p><strong>示例</strong></p>
 <style>
-    .url{
-        background-image:url('../../assets/test.png');
+    .linear-gradient-default{
+        background:linear-gradient(blue,pink)
     }
 </style>
 
-<div class="box url"></div>
+<div class="box linear-gradient-default"></div>
 
 <p><strong>html</strong> </p>
-<pre><code>&lt;div class=&quot;box url&quot;&gt;&lt;/div&gt;
+<pre><code>&lt;div class=&quot;box linear-gradient-default&quot;&gt;&lt;/div&gt;
 </code></pre>
 <p><strong>css</strong></p>
-<pre><code>.url{
-    background-image:url(&#39;../../assets/test.png&#39;);
+<pre><code>.linear-gradient-default{
+    background:linear-gradient(blue,pink)
+}
+</code></pre>
+<hr>
+<h3 id="112-改变渐变方向">1.1.2 改变渐变方向</h3>
+<blockquote>
+<p>linear-gradient支持的方向改变属性<br>单一方向:to left、bottom(default)、top、right<br>多方向组合:to left bottom、left top...<br>角度改变:Angles。0角度位6点方向，角度顺时针增加。角度的详细属性参考<a href="../Angles/index">Angles</a>  </p>
+</blockquote>
+<p><strong>语法</strong></p>
+<pre><code>background:linear-gradient(&lt;direction&gt;,blue,pink)
+</code></pre>
+<p><strong>示例</strong></p>
+<style>
+    .linear-gradient-oneDirection{
+        background:linear-gradient(to right,blue,pink)
+    }
+    .linear-gradient-groupDirection{
+        background:linear-gradient(to right top,blue,pink)
+    }
+    .linear-gradient-anglesDirection{
+        background:linear-gradient(30deg,blue,pink)
+    }
+</style>
+
+<p><em>单一方向</em></p>
+<div class="box linear-gradient-oneDirection"></div>  
+
+<p><em>组合方向</em></p>
+<div class="box linear-gradient-groupDirection"></div>  
+
+<p><em>角度</em></p>
+<div class="box linear-gradient-anglesDirection"></div>
+
+<p><strong>html</strong> </p>
+<pre><code>//单一方向
+&lt;div class=&quot;box linear-gradient-default&quot;&gt;&lt;/div&gt;
+//组合方向
+&lt;div class=&quot;box linear-gradient-groupDirection&quot;&gt;&lt;/div&gt;
+//角度
+&lt;div class=&quot;box linear-gradient-anglesDirection&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p><strong>css</strong></p>
+<pre><code>/*单一方向 */
+.linear-gradient-oneDirection{
+    background:linear-gradient(to right,blue,pink)
+}
+/*组合方向 */
+.linear-gradient-groupDirection{
+    background:linear-gradient(to right top,blue,pink)
+}
+/*角度 */
+.linear-gradient-anglesDirection{
+    background:linear-gradient(30deg,blue,pink)
+}
+</code></pre>
+<hr>
+<h3 id="13设置颜色范围">1.3设置颜色范围</h3>
+<blockquote>
+<p>从上文中我们发现不设置颜色的范围时，颜色是平均分配在视图中的，那么有没有办法去自定义颜色的范围呢，既然都这么问了，那么答案肯定是有的。</p>
+</blockquote>
+<p><strong>语法</strong></p>
+<pre><code>background:linear-gradient(&lt;color&gt; &lt;position&gt; &lt;position&gt;,pink)
+</code></pre>
+<blockquote>
+<p>需要注意的是,第一个颜色起点永远为0，最后一个颜色终点永远为100%。 第一个position代表起点位置，第二个代表终点位置。也可以只设置一个position，那么就表明颜色的起点。
+如果前一个颜色的终点与下一个颜色的起点一致，那么两个色块之间就不会产生过度渐变。也就是理解为两个色块之间的距离则为过度距离。</p>
+</blockquote>
+<p><strong>示例</strong></p>
+<style>
+    .linear-gradient-position{
+        background:linear-gradient(blue 20% 30%,pink 30%,red 80%,yellow 90%)
+    }
+</style>
+
+<div class="box linear-gradient-position"></div>
+
+<p><strong>html</strong> </p>
+<pre><code>&lt;div class=&quot;box linear-gradient-position&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p><strong>css</strong></p>
+<pre><code>.linear-gradient-position{
+    background:linear-gradient(blue 20% 30%,pink 30%,red 80%,yellow 90%)
 }
 </code></pre>
 <h2 id="文献">文献</h2>
 <ul>
-<li>[1] <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-image">MDN</a></li>
+<li>[1] <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients">MDN</a></li>
 </ul>
 <!-- 通用css -->
 <style>
